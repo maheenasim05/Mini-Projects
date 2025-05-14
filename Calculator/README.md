@@ -2,5 +2,5 @@
 
 A simple calculator built using HTML and CSS.
 
-![Preview](./screenshot.png)
+![Preview](./Screenshot 2025-05-14 161259.png)
 
