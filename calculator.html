@@ -1,0 +1,69 @@
+<html>
+<head>
+	<link rel="stylesheet" href="calculator.css">
+	<title>Calculator</title>
+	
+</head>
+<body>
+		<div class="heading">
+			<h1>Calculator</h1>
+		</div>
+		
+		<div class="calculator">
+			<div class="inputbox" id="ans"></div>
+			
+			
+			<div class="box">
+			<div class="line line1">
+				<button class="btn" onclick="appendbox('7')">7</button>
+				<button class="btn" onclick="appendbox('8')">8</button>
+				<button class="btn" onclick="appendbox('9')">9</button>
+				<button class="btn" onclick="appendbox('/')">/</button>
+			</div>
+			<div class=" line line2">
+				<button class="btn" onclick="appendbox('4')">4</button>
+				<button class="btn" onclick="appendbox('5')">5</button>
+				<button class="btn" onclick="appendbox('6')">6</button>
+				<button class="btn" onclick="appendbox('*')">*</button>
+			</div>
+			<div class="line line3">
+				<button class="btn" onclick="appendbox('3')">3</button>
+				<button class="btn" onclick="appendbox('2')">2</button>
+				<button class="btn" onclick="appendbox('1')">1</button>
+				<button class="btn" onclick="appendbox('-')">-</button>
+			</div>
+			<div class="line line4">
+				<button class="btn" onclick="clearbox()">C</button>
+				<button class="btn" onclick="appendbox('0')">0</button>
+				<button class="btn" onclick="appendbox('.')">.</button>
+				<button class="btn" onclick="appendbox('+')">+</button>
+			</div>
+			<div class="line line5">
+				<button class="btn" onclick="solve()">=</button>
+			</div>
+			</div>
+		</div>	
+
+	<script>
+		let ans = document.getElementById('ans');
+		
+		//append
+		const appendbox = (eventValue) => {
+			ans.innerHTML += eventValue;
+		}
+		
+		//clear
+		const clearbox = () => {
+		 ans.innerHTML = ''
+		}
+		
+		//solve
+		const solve = () => {
+		 ans.innerHTML = eval (ans.innerHTML)
+		}
+	</script>
+		
+</body>
+
+</html>
+
